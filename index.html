@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommenssteuer Rechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <form action="" id="myForm">
+            <label for="">zu versteuerndes Einkommen (zvE)</label>
+            <input type="number" placeholder="0,00" id="user-input"> <label for="">Euro</label>
+            <br>
+            <label for="">Persönliche Verhätnisse</label>
+            <input type="radio" name="condition" id="single" checked onchange="calc()"> <label
+                for="">alleinstehend</label>
+            <input type="radio" name="condition" id="married" onchange="calc()"> <label
+                for="">verheiratet/verpartnert</label>
+            <br>
+            <label for="">Berechnungsjahr</label>
+            <input type="radio" name="year" checked id="y2019" onchange="calc()"> <label for="">2019</label>
+            <input type="radio" name="year" id="y2020" onchange="calc()"> <label for="">2020</label>
+            <input type="radio" name="year" id="y2021" onchange="calc()"> <label for="">2021</label>
+            <br>
+            <input type="button" value="Berechnen" onclick="calc()"><input type="reset" value="Reset">
+        </form>
+        <p>zu versteuerndes Einkommen (zvE): <span id="summe"></span></p>
+        <p>persönliche Verhältnisse : <span id="persönlich"></span></p>
+        <p>Berechnungsjahr : <span id="year"></span></p>
+        <p>Einkommenssteuer: <span id="result"></span></p>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
